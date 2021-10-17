@@ -1,2 +1,19 @@
 @import "/node_modules/bootstrap/scss/bootstrap.scss";
 
+// ---------------- common classes ---------------- //
+.text-white {
+    color: $white;
+}
+// ---------------- common classes end ---------------- //
+
+/* @font-face {
+    font-family: 'Josefin Sans Bold';
+    src: url('/src/assets/fonts/JosefinSans-Bold.eot') format('embedded-opentype'),
+        url('/src/assets/fonts/JosefinSans-Bold.woff2') format('woff2'),
+        url('/src/assets/fonts/JosefinSans-Bold.woff') format('woff'),
+        url('/src/assets/fonts/JosefinSans-Bold.svg') format('svg');
+} */
+
+h1 {
+    //font-family: 'Josefin Sans Bold';
+}

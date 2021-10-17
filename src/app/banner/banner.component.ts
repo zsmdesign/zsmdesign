@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
+  bannerVideo: any;
+
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.bannerVideo = document.getElementById("heroVideo");
+
+      if(this.bannerVideo.muted){
+        this.bannerVideo.muted = false;
+      } else {
+        this.bannerVideo.muted = true;
+        this.bannerVideo.play()
+      }
+    }, 200);
   }
 
 }

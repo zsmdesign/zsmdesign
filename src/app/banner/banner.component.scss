@@ -1,1 +1,31 @@
+@import '/node_modules/bootstrap/scss/bootstrap.scss';
 
+#heroContainer {
+    position: relative;
+    z-index: -1;
+
+    .logo-container {
+        img {
+            position: absolute;
+            width: 25%;
+            left: 50%;
+            top: 9rem;
+            transform: translateX(-50%);
+        }
+
+        .logo {
+            z-index: 1;
+        }
+
+        .mask {
+            z-index: 0;
+            opacity: .5;
+        }
+
+        @include media-breakpoint-down(sm) {
+            img {
+                top: 3rem;
+            }
+        }
+    }
+}
