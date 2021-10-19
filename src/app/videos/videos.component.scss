@@ -1,15 +1,102 @@
 @import '/node_modules/bootstrap/scss/bootstrap.scss';
 
+#sunriseTrigger {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    top: -25rem;
+}
+
 #videosContainer {
     position: relative;
     background-color: #1F001B;
 
-    &.vertical-rythm {
-        @include media-breakpoint-up(sm) { }
-        @include media-breakpoint-up(md) { }
-        @include media-breakpoint-up(lg) { }
-        @include media-breakpoint-up(xl) { }
-        @include media-breakpoint-up(xxl) { }
+    &:after {
+        content: '';
+        background: url('/assets/images/segment-layer-09.svg') no-repeat;
+        background-size: cover;
+        background-position-y: bottom;
+        width: 100%;
+        display: block;
+        height: 20rem;
+
+        @include media-breakpoint-down(md) {
+            height: 15rem;
+        }
+        @include media-breakpoint-down(sm) {
+            height: 10rem;
+        }
+        @include media-breakpoint-up(lg) {
+            height: 30rem;
+        }
+
+    }
+
+    .keywords {
+        color: $white;
+
+        .faCircle {
+            color: $highlight-color;
+            font-size: 50%;
+            position: relative;
+            bottom: 5px;
+            margin: .5rem;
+        }
+    }
+
+    .iframe-container {
+        position: relative;
+        height: 17rem;
+        width: 30rem;
+
+        @include media-breakpoint-down(lg) {
+            height: 24rem;
+            width: 100%;
+        }
+        @include media-breakpoint-down(md) {
+            height: 18rem;
+        }
+        @include media-breakpoint-down(sm) {
+            height: 12rem;
+        }
+    }
+
+    .video-row {
+        padding-bottom: 3rem;
+
+        @include media-breakpoint-down(lg) {
+            display: block !important;
+        }
+    }
+
+    .gutter {
+        @include media-breakpoint-up(lg) {
+            flex: 0 0 auto;
+            width: 83.33333333%;
+            margin: auto;
+        }
+    }
+
+    .text-container {
+        padding-left: 5rem;
+
+        @include media-breakpoint-down(lg) {
+            padding-left: 0;
+            padding-top: 1rem;
+        }
+        @include media-breakpoint-down(sm) {
+            margin: 0 3.5rem;
+        }
+
+        a {
+            color: lighten($highlight-color, 15%);
+            text-decoration: none;
+            transition: color ease-in-out .3s;
+
+            &:hover {
+                color: lighten($highlight-color, 5%);
+            }
+        }
     }
 }
 
@@ -26,89 +113,78 @@
     @media only screen and (min-width: 800px) { top: -35rem; }
     @media only screen and (min-width: 900px) { top: -40rem; }
     @media only screen and (min-width: 1000px) { top: -40rem; }
-    @media only screen and (min-width: 1100px) { top: -48rem; }
-    @media only screen and (min-width: 1400px) { top: -58rem; height: 160%; }
-    @media only screen and (min-width: 1700px) { top: -70rem; height: 180%; }
-    @media only screen and (min-width: 1900px) { top: -80rem; height: 250%; }
+    @media only screen and (min-width: 1100px) { top: -51rem; }
+    @media only screen and (min-width: 1400px) { top: -61rem; }
+    @media only screen and (min-width: 1700px) { top: -70rem; }
+    @media only screen and (min-width: 1900px) { top: -80rem; }
     @media only screen and (min-width: 2200px) { top: -90rem; }
     @media only screen and (min-width: 2600px) { top: -95rem; }
+
+    &.sunrise {
+        .svg {
+            top: 0 !important;
+        }
+    }
 
     .svg {
         position: absolute;
         width: 100%;
         height: 100%;
+        transition: top cubic-bezier( 0.12, 0.01, 0, 0.99 ) 1.2s;
 
         &.layer-1 {
             background: url('/assets/images/segment-layer-01.svg') no-repeat;
             background-position-y: top;
-            background-size: cover;
-
-            @include media-breakpoint-down(xl) {
-                background-size: contain;
-            }
+            background-size: contain;
+            transition-delay: .2s;
+            top: 14rem;
         }
         &.layer-2 {
             background: url('/assets/images/segment-layer-02.svg') no-repeat;
             background-position-y: top;
-            background-size: cover;
-
-            @include media-breakpoint-down(xl) {
-                background-size: contain;
-            }
+            background-size: contain;
+            transition-delay: .4s;
+            top: 14rem;
         }
         &.layer-3 {
             background: url('/assets/images/segment-layer-03.svg') no-repeat;
             background-position-y: top;
-            background-size: cover;
-
-            @include media-breakpoint-down(xl) {
-                background-size: contain;
-            }
+            background-size: contain;
+            transition-delay: .6s;
+            top: 14rem;
         }
         &.layer-4 {
             background: url('/assets/images/segment-layer-04.svg') no-repeat;
             background-position-y: top;
-            background-size: cover;
-
-            @include media-breakpoint-down(xl) {
-                background-size: contain;
-            }
+            background-size: contain;
+            transition-delay: .8s;
+            top: 13rem;
         }
         &.layer-5 {
             background: url('/assets/images/segment-layer-05.svg') no-repeat;
             background-position-y: top;
-            background-size: cover;
-
-            @include media-breakpoint-down(xl) {
-                background-size: contain;
-            }
+            background-size: contain;
+            transition-delay: 1s;
+            top: 11rem;
         }
         &.layer-6 {
             background: url('/assets/images/segment-layer-06.svg') no-repeat;
             background-position-y: top;
-            background-size: cover;
-
-            @include media-breakpoint-down(xl) {
-                background-size: contain;
-            }
+            background-size: contain;
+            transition-delay: 1.2s;
+            top: 8rem;
         }
         &.layer-7 {
             background: url('/assets/images/segment-layer-07.svg') no-repeat;
             background-position-y: top;
-            background-size: cover;
-
-            @include media-breakpoint-down(xl) {
-                background-size: contain;
-            }
+            background-size: contain;
+            transition-delay: 1.4s;
+            top: 10rem;
         }
         &.layer-8 {
             background: url('/assets/images/segment-layer-08.svg') no-repeat;
             background-position-y: top;
-            background-size: cover;
-
-            @include media-breakpoint-down(xl) {
-                background-size: contain;
-            }
+            background-size: contain;
         }
     }
 }
