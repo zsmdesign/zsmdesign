@@ -14,7 +14,7 @@ import { FrontendComponent } from './frontend/frontend.component';
     BannerComponent,
     FooterComponent,
     VideosComponent,
-    FrontendComponent,
+    FrontendComponent
   ],
   imports: [
     BrowserModule,

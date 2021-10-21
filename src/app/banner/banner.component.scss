@@ -1,5 +1,15 @@
 @import '/node_modules/bootstrap/scss/bootstrap.scss';
 
+.navbar {
+    &.bg-dark {
+        background-color: $dark-background !important;
+    }
+
+    .navbar-logo {
+        width: 3.5rem;
+    }
+}
+
 #heroContainer {
     position: relative;
     z-index: -1;

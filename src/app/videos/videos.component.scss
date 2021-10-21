@@ -9,7 +9,7 @@
 
 #videosContainer {
     position: relative;
-    background-color: #1F001B;
+    background-color: $dark-background;
 
     &:after {
         content: '';
@@ -18,7 +18,7 @@
         background-position-y: bottom;
         width: 100%;
         display: block;
-        height: 20rem;
+        height: 15rem;
 
         @include media-breakpoint-down(md) {
             height: 15rem;
@@ -27,6 +27,12 @@
             height: 10rem;
         }
         @include media-breakpoint-up(lg) {
+            height: 20rem;
+        }
+        @include media-breakpoint-up(xl) {
+            height: 25rem;
+        }
+        @media only screen and (min-width: 2300px) {
             height: 30rem;
         }
 
@@ -136,49 +142,49 @@
             background: url('/assets/images/segment-layer-01.svg') no-repeat;
             background-position-y: top;
             background-size: contain;
-            transition-delay: .2s;
+            transition-delay: .5s;
             top: 14rem;
         }
         &.layer-2 {
             background: url('/assets/images/segment-layer-02.svg') no-repeat;
             background-position-y: top;
             background-size: contain;
-            transition-delay: .4s;
+            transition-delay: .7s;
             top: 14rem;
         }
         &.layer-3 {
             background: url('/assets/images/segment-layer-03.svg') no-repeat;
             background-position-y: top;
             background-size: contain;
-            transition-delay: .6s;
+            transition-delay: .9s;
             top: 14rem;
         }
         &.layer-4 {
             background: url('/assets/images/segment-layer-04.svg') no-repeat;
             background-position-y: top;
             background-size: contain;
-            transition-delay: .8s;
+            transition-delay: 1.1s;
             top: 13rem;
         }
         &.layer-5 {
             background: url('/assets/images/segment-layer-05.svg') no-repeat;
             background-position-y: top;
             background-size: contain;
-            transition-delay: 1s;
+            transition-delay: 1.3s;
             top: 11rem;
         }
         &.layer-6 {
             background: url('/assets/images/segment-layer-06.svg') no-repeat;
             background-position-y: top;
             background-size: contain;
-            transition-delay: 1.2s;
+            transition-delay: 1.5s;
             top: 8rem;
         }
         &.layer-7 {
             background: url('/assets/images/segment-layer-07.svg') no-repeat;
             background-position-y: top;
             background-size: contain;
-            transition-delay: 1.4s;
+            transition-delay: 1.7s;
             top: 10rem;
         }
         &.layer-8 {

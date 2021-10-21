@@ -30,23 +30,18 @@ export class VideosComponent implements OnInit {
   }
 
   isScrolledIntoView(elem: any) {
-      this.docViewTop = $(window).scrollTop();
-      let docViewBottom = this.docViewTop + $(window).height();
-      let elemTop = $(elem).offset()?.top;
-      let elemHeight = $(elem).height();
-      let elemBottom;
-  
-      if(elemHeight && elemTop) {
-        elemBottom = elemTop + elemHeight
-      }
-  
-      if(elemBottom && elemTop) {
-        console.log((elemBottom <= docViewBottom))
-        console.log((elemTop >= this.docViewTop))
+    this.docViewTop = $(window).scrollTop();
+    let docViewBottom = this.docViewTop + $(window).height();
+    let elemTop = $(elem).offset()?.top;
+    let elemHeight = $(elem).height();
+    let elemBottom;
 
-
-        return ((elemBottom <= docViewBottom) && (elemTop >= this.docViewTop));
-      } else return false
-
+    if(elemHeight && elemTop) {
+      elemBottom = elemTop + elemHeight
     }
+
+    if(elemBottom && elemTop) {
+      return ((elemBottom <= docViewBottom) && (elemTop >= this.docViewTop));
+    } else return false
+  }
 }
