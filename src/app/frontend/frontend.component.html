@@ -4,6 +4,7 @@
 
 <div id="frontendContainer" class="vertical-rythm">
     <div class="container">
+
         <div class="d-flex justify-content-center pb-5">
             <div class="text-center">
                 <h1 class="pb-3">Front-End Development</h1>
@@ -13,17 +14,30 @@
 
         <div class="row">
             <div class="col-lg-5">
-                <div class="site-illustration" [ngStyle]="{'background-image': 'url(' + illustration + ')'}"></div>
-                <p class="mb-0 pt-3">Does everybody know that pig named Lorem Ipsum? She's a disgusting pig, right? Lorem Ipsum is FAKE TEXT! An 'extremely credible source' has called my office and told me that Lorem Ipsum's birth certificate is a fraud. Lorem Ipsum is FAKE TEXT! That other text? Sadly, it’s no longer a 10. Trump Ipsum is calling for a total and complete shutdown of Muslim text entering your website.</p>
-            </div>
-            <div id="cardCarousel" class="col-lg-7">
-
-                <div class="roll-icon"><fa-icon class="faPlay" [icon]='faPlay'></fa-icon></div>
-                <div class="card-illustration" *ngFor="let card of cards; index as i; trackBy: trackByFn">
-                    <div class="mask"></div>
-                    <div class="image" [ngStyle]="{'background-image': 'url(' + card.url + ')'}"></div>
+                <div id="{{ i + 1 }}" class="site-container" [ngClass]="{'reveal': site.visible}" *ngFor="let site of sites; index as i;">
+                    <ng-container *ngIf="site.visible">
+                        <div class="site-illustration" [ngStyle]="{'background-image': 'url(' + site.imgUrl + ')'}"></div>
+                        <div class="title-container"><h2 class="pt-3">{{ site.title }}</h2></div>
+                        <div class="text-container"><p class="mb-0">{{ site.text }}</p></div>
+                    </ng-container>
                 </div>
-                
+            </div>
+
+            <div class="col-sm-12 col-lg-7">
+                <div id="cardCarousel">
+                    <div id="largeRollIcons">
+                        <div class="roll-icon" (click)="rollNext()"><fa-icon class="faPlay" [icon]='faPlay'></fa-icon></div>
+                    </div>
+                    <div id="smallRollIcons" class="text-center">
+                        <div class="rotate left"><div class="roll-icon me-4" (click)="rollNext()"><fa-icon class="faPlay" [icon]='faPlay'></fa-icon></div></div>
+                        <div class="rotate right"><div class="roll-icon ms-4" (click)="rollNext()"><fa-icon class="faPlay" [icon]='faPlay'></fa-icon></div></div>
+                    </div>
+
+                    <div id="{{ j + 1 }}" class="card-illustration" [ngClass]="'order-' + card.order" *ngFor="let card of cards; index as j">
+                        <div class="mask"></div>
+                        <div class="image" [ngStyle]="{'background-image': 'url(' + card.imgUrl + ')'}"></div>
+                    </div>
+                </div>
             </div>
         </div>
 
