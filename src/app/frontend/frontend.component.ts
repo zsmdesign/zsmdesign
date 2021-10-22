@@ -37,11 +37,13 @@ export class FrontendComponent implements OnInit {
   }
 
   rollNext() {
+    let cardLength = this.cards.length.toString();
+
     for(let i in this.cards) {
       let currentCardOrder = parseInt(this.cards[i].order);
 
       if((currentCardOrder - 1) === 0) {
-        this.cards[i].order = '4';
+        this.cards[i].order = cardLength;
       } else {
         this.cards[i].order = (currentCardOrder - 1).toString();
       }
@@ -65,4 +67,32 @@ export class FrontendComponent implements OnInit {
     }
   }
 
+  rollBack() {
+    for(let i in this.cards) {
+      let currentCardOrder = parseInt(this.cards[i].order);
+
+      if(currentCardOrder === 4) {
+        this.cards[i].order = '1';
+      } else {
+        this.cards[i].order = (currentCardOrder + 1).toString();
+      }
+    }
+
+    let siteLength = this.sites.length;
+
+    for(let j in this.sites) {
+      let index = parseInt(j);
+
+      if(this.sites[j].visible) {
+        if(index === 0) {
+          this.sites[j].visible = false;
+          this.sites[siteLength - 1].visible = true;
+        } else {
+          this.sites[j].visible = false;
+          this.sites[index - 1].visible = true;
+        }
+        break
+      }
+    }
+  }
 }

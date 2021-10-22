@@ -13,7 +13,7 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-5">
+            <div class="col-lg-5 d-none d-lg-block">
                 <div id="{{ i + 1 }}" class="site-container" [ngClass]="{'reveal': site.visible}" *ngFor="let site of sites; index as i;">
                     <ng-container *ngIf="site.visible">
                         <div class="site-illustration" [ngStyle]="{'background-image': 'url(' + site.imgUrl + ')'}"></div>
@@ -29,14 +29,26 @@
                         <div class="roll-icon" (click)="rollNext()"><fa-icon class="faPlay" [icon]='faPlay'></fa-icon></div>
                     </div>
                     <div id="smallRollIcons" class="text-center">
-                        <div class="rotate left"><div class="roll-icon me-4" (click)="rollNext()"><fa-icon class="faPlay" [icon]='faPlay'></fa-icon></div></div>
-                        <div class="rotate right"><div class="roll-icon ms-4" (click)="rollNext()"><fa-icon class="faPlay" [icon]='faPlay'></fa-icon></div></div>
+                        <div class="rotate left"><div class="roll-icon" (click)="rollNext()"><fa-icon class="faPlay" [icon]='faPlay'></fa-icon></div></div>
+                        <div class="rotate right ms-3"><div class="roll-icon" (click)="rollBack()"><fa-icon class="faPlay" [icon]='faPlay'></fa-icon></div></div>
                     </div>
 
+                    
                     <div id="{{ j + 1 }}" class="card-illustration" [ngClass]="'order-' + card.order" *ngFor="let card of cards; index as j">
                         <div class="mask"></div>
                         <div class="image" [ngStyle]="{'background-image': 'url(' + card.imgUrl + ')'}"></div>
                     </div>
+
+                    <div class="card-carousel-gutter"></div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 d-lg-none">
+                <div id="{{ i + 1 }}" class="site-container" [ngClass]="{'reveal': site.visible}" *ngFor="let site of sites; index as i;">
+                    <ng-container *ngIf="site.visible">
+                        <div class="title-container"><h2 class="pt-3">{{ site.title }}</h2></div>
+                        <div class="text-container"><p class="mb-0">{{ site.text }}</p></div>
+                    </ng-container>
                 </div>
             </div>
         </div>
