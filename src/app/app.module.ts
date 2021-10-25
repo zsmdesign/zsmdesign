@@ -7,6 +7,7 @@ import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { VideosComponent } from './videos/videos.component';
 import { FrontendComponent } from './frontend/frontend.component';
+import { AboutmeComponent } from './aboutme/aboutme.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FrontendComponent } from './frontend/frontend.component';
     BannerComponent,
     FooterComponent,
     VideosComponent,
-    FrontendComponent
+    FrontendComponent,
+    AboutmeComponent
   ],
   imports: [
     BrowserModule,

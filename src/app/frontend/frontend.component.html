@@ -17,8 +17,26 @@
                 <div id="{{ i + 1 }}" class="site-container" [ngClass]="{'reveal': site.visible}" *ngFor="let site of sites; index as i;">
                     <ng-container *ngIf="site.visible">
                         <div class="site-illustration" [ngStyle]="{'background-image': 'url(' + site.imgUrl + ')'}"></div>
-                        <div class="title-container"><h2 class="pt-3">{{ site.title }}</h2></div>
-                        <div class="text-container"><p class="mb-0">{{ site.text }}</p></div>
+                        <div class="title-container"><h2 class="pt-3"><a href="{{ site.siteUrl }}" target="_blank">{{ site.title }}</a></h2></div>
+                        <div class="text-container"><p class="mb-0">
+                            {{ site.text }}
+                            <ng-container *ngIf="site.id === 1">
+                                <a href="https://www.oracle.com/webfolder/technetwork/jet/index.html" target="_blank">OracleJET</a>
+                                <span> during this period of my career.</span>
+                            </ng-container>
+                            <ng-container *ngIf="site.id === 2">
+                                <a href="https://www.php.net/" target="_blank">PHP</a>
+                                <span> and built with </span>
+                                <a href="https://laravel.com/" target="_blank">Laravel</a>
+                                <span>.</span>
+                            </ng-container>
+                            <ng-container *ngIf="site.id === 3">
+                                <a href="https://www.php.net/" target="_blank">PHP</a>
+                                <span> with </span>
+                                <a href="https://laravel.com/" target="_blank">Laravel</a>
+                                <span> so it could be built fast and meet the set requirements.</span>
+                            </ng-container>
+                        </p></div>
                     </ng-container>
                 </div>
             </div>
@@ -26,7 +44,8 @@
             <div class="col-sm-12 col-lg-7">
                 <div id="cardCarousel">
                     <div id="largeRollIcons">
-                        <div class="roll-icon" (click)="rollNext()"><fa-icon class="faPlay" [icon]='faPlay'></fa-icon></div>
+                        <div class="roll-icon left" (click)="rollNext()"><fa-icon class="faPlay" [icon]='faPlay'></fa-icon></div>
+                        <div class="roll-icon right" (click)="rollBack()"><fa-icon class="faPlay" [icon]='faPlay'></fa-icon></div>
                     </div>
                     <div id="smallRollIcons" class="text-center">
                         <div class="rotate left"><div class="roll-icon" (click)="rollNext()"><fa-icon class="faPlay" [icon]='faPlay'></fa-icon></div></div>
@@ -47,7 +66,25 @@
                 <div id="{{ i + 1 }}" class="site-container" [ngClass]="{'reveal': site.visible}" *ngFor="let site of sites; index as i;">
                     <ng-container *ngIf="site.visible">
                         <div class="title-container"><h2 class="pt-3">{{ site.title }}</h2></div>
-                        <div class="text-container"><p class="mb-0">{{ site.text }}</p></div>
+                        <div class="text-container"><p class="mb-0">
+                            {{ site.text }}
+                            <ng-container *ngIf="site.id === 1">
+                                <a href="https://www.oracle.com/webfolder/technetwork/jet/index.html" target="_blank">OracleJET</a>
+                                <span> during this period of my career.</span>
+                            </ng-container>
+                            <ng-container *ngIf="site.id === 2">
+                                <a href="https://www.php.net/" target="_blank">PHP</a>
+                                <span> and built with </span>
+                                <a href="https://laravel.com/" target="_blank">Laravel</a>
+                                <span>.</span>
+                            </ng-container>
+                            <ng-container *ngIf="site.id === 3">
+                                <a href="https://www.php.net/" target="_blank">PHP</a>
+                                <span> with </span>
+                                <a href="https://laravel.com/" target="_blank">Laravel</a>
+                                <span> so it could be built fast and meet the set requirements.</span>
+                            </ng-container>
+                        </p></div>
                     </ng-container>
                 </div>
             </div>

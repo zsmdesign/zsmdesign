@@ -13,21 +13,20 @@ import { faPlay, faCircle } from '@fortawesome/free-solid-svg-icons';
 export class FrontendComponent implements OnInit {
   faPlay = faPlay;
   faCircle = faCircle;
-  illustration = 'https://picsum.photos/440';
-  card = 'https://picsum.photos/320/480';
+  oJet = 'test';
 
   cards = [
-    { id: 0, imgUrl: 'https://picsum.photos/id/200/320/480', order: '1' },
-    { id: 1, imgUrl: 'https://picsum.photos/id/201/320/480', order: '2' },
-    { id: 2, imgUrl: 'https://picsum.photos/id/202/320/480', order: '3' },
-    { id: 3, imgUrl: 'https://picsum.photos/id/203/320/480', order: '4' }
+    { id: 0, imgUrl: './assets/images/card-aimotive.jpg', order: '1' },
+    { id: 1, imgUrl: './assets/images/card-oracle.jpg', order: '2' },
+    { id: 2, imgUrl: './assets/images/card-designterminal.jpg', order: '3' },
+    { id: 3, imgUrl: './assets/images/card-esa.jpg', order: '4' }
   ]
 
   sites = [
-    { id: 0, imgUrl: 'https://picsum.photos/id/200/440/440', siteUrl: 'blank', visible: true, title: 'A Site Name', text: 'Does everybody know that pig named Lorem Ipsum? Shes a disgusting pig, right? Lorem Ipsum is FAKE TEXT! An extremely credible source has called my office and told me that Lorem Ipsums birth certificate is a fraud. Lorem Ipsum is FAKE TEXT! That other text? Sadly, it’s no longer a 10. Trump Ipsum is calling for a total and complete shutdown of Muslim text entering your website.' },
-    { id: 1, imgUrl: 'https://picsum.photos/id/201/440/440', siteUrl: 'blank', visible: false, title: 'B Site Name', text: 'The best taco bowls are made in Trump Tower Grill. I love Hispanics! Lorem Ipsum is the single greatest threat. We are not – we are not keeping up with other websites. An ‘extremely credible source’ has called my office and told me that Barack Obama’s placeholder text is a fraud.' },
-    { id: 2, imgUrl: 'https://picsum.photos/id/202/440/440', siteUrl: 'blank', visible: false, title: 'C Site Name', text: 'Some people have an ability to write placeholder text… It’s an art you’re basically born with. You either have it or you don’t. All of the words in Lorem Ipsum have flirted with me – consciously or unconsciously. That’s to be expected. Look at these words. Are they small words? And he referred to my words.' },
-    { id: 3, imgUrl: 'https://picsum.photos/id/203/440/440', siteUrl: 'blank', visible: false, title: 'D Site Name', text: 'We have so many things that we have to do better… and certainly ipsum is one of them. An ‘extremely credible source’ has called my office and told me that Lorem Ipsum’s birth certificate is a fraud. I don’t think anybody knows it was Russia that wrote Lorem Ipsum, but I don’t know, maybe it was. It could be Russia.' }
+    { id: 0, imgUrl: './assets/images/site-aimotive.png', siteUrl: 'https://aimotive.com/', visible: true, title: 'aimotive', text: `During my four years at AIMOTIVE the company has grown from 16 to around 300 employees. Just as the internal management sites, the main page also had to go through a big evolution to support the needs of this dinamic change. My work related to this company is quite complex. I was not only responsible for the development and design most of the UI's, but also created the foundations of the brand's full appearance.` },
+    { id: 1, imgUrl: './assets/images/site-oracle.png', siteUrl: 'https://www.oracle.com/index.html', visible: false, title: 'Oracle Corporation', text: 'Worked within Oracle Applications Labs, together with an international team across the globe. Maintained and developed cloud-based enterprise applications with the latest technologies. Actively participated in the international planning processes, before covid changed everything. Thanks to the great challenges I had, picked up quite a few tricks with Javascript and ' },
+    { id: 2, imgUrl: './assets/images/site-designterminal.png', siteUrl: 'http://dt.whoops.hu/hu', visible: false, title: 'Design Terminal', text: 'Design Terminal is an innovative agency that runs business development projects in 12 countries and is also a startup accelerator. The page design turned out quite simple but reather effective. It has a complete content management side which runs on ' },
+    { id: 3, imgUrl: './assets/images/site-esa.png', siteUrl: 'https://esabichu.designterminal.org/hu', visible: false, title: 'ESA BIC Hungary', text: 'This site was created on behalf of the The Europian Space Agency. The project that this site supports, are set to help space startups throughout their incubation periods and even helps to organize university and high school education programs. For the sake of simplicity and fast development I used ' }
   ]
 
   constructor() { }
