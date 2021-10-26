@@ -8,6 +8,27 @@
     .navbar-logo {
         width: 3.5rem;
     }
+
+    .menu-opions {
+        margin-right: auto;
+
+        a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: $white;
+            font-family: 'Noto Sans';
+            text-transform: uppercase;
+            transition: color ease-in-out .3s;
+
+            &:first-of-type {
+                margin-left: 0;
+            }
+
+            &:hover {
+                color: $highlight-color;
+            }
+        }
+    }
 }
 
 #heroContainer {

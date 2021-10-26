@@ -19,6 +19,8 @@
         width: 100%;
         display: block;
         height: 15rem;
+        position: relative;
+        top: 5px;
 
         @include media-breakpoint-down(md) {
             height: 15rem;
