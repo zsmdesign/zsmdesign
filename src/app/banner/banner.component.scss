@@ -17,9 +17,9 @@
     .logo-container {
         img {
             position: absolute;
-            width: 25%;
+            width: 22%;
             left: 50%;
-            top: 9rem;
+            top: 4rem;
             transform: translateX(-50%);
         }
 
@@ -36,6 +36,20 @@
             img {
                 top: 3rem;
             }
+        }
+    }
+
+    .text-container {
+        position: absolute;
+        color: $white;
+        text-align: center;
+        width: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50%;
+
+        h1 {
+            font-size: 180%;
         }
     }
 }

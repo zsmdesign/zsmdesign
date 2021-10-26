@@ -7,7 +7,7 @@
 
         <div class="d-flex justify-content-center pb-5">
             <div class="text-center">
-                <h1 class="pb-3">Front-End Development</h1>
+                <h1 class="pb-2 mb-0 fw-bold">Front-End Development</h1>
                 <h4 class="keywords">Typescript/Javascript <fa-icon class="faCircle" [icon]='faCircle'></fa-icon> Angular <fa-icon class="faCircle" [icon]='faCircle'></fa-icon> SCSS <fa-icon class="faCircle" [icon]='faCircle'></fa-icon> Graphic Design</h4>
             </div>
         </div>
@@ -17,7 +17,7 @@
                 <div id="{{ i + 1 }}" class="site-container" [ngClass]="{'reveal': site.visible}" *ngFor="let site of sites; index as i;">
                     <ng-container *ngIf="site.visible">
                         <div class="site-illustration" [ngStyle]="{'background-image': 'url(' + site.imgUrl + ')'}"></div>
-                        <div class="title-container"><h2 class="pt-3"><a href="{{ site.siteUrl }}" target="_blank">{{ site.title }}</a></h2></div>
+                        <div class="title-container"><h2 class="pt-3 fw-bold"><a href="{{ site.siteUrl }}" target="_blank">{{ site.title }}</a></h2></div>
                         <div class="text-container"><p class="mb-0">
                             {{ site.text }}
                             <ng-container *ngIf="site.id === 1">
@@ -65,7 +65,7 @@
             <div class="col-sm-12 d-lg-none">
                 <div id="{{ i + 1 }}" class="site-container" [ngClass]="{'reveal': site.visible}" *ngFor="let site of sites; index as i;">
                     <ng-container *ngIf="site.visible">
-                        <div class="title-container"><h2 class="pt-3">{{ site.title }}</h2></div>
+                        <div class="title-container"><h2 class="pt-3 fw-bold">{{ site.title }}</h2></div>
                         <div class="text-container"><p class="mb-0">
                             {{ site.text }}
                             <ng-container *ngIf="site.id === 1">

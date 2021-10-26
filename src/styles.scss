@@ -1,4 +1,4 @@
-@import "/node_modules/bootstrap/scss/bootstrap.scss";
+@import '~bootstrap/scss/bootstrap';
 
 // ---------------- common classes ---------------- //
 .text-white {
@@ -6,16 +6,14 @@
 }
 // ---------------- common classes end ---------------- //
 
-/* @font-face {
-    font-family: 'Josefin Sans Bold';
-    src: url('/src/assets/fonts/JosefinSans-Bold.eot') format('embedded-opentype'),
-        url('/src/assets/fonts/JosefinSans-Bold.woff2') format('woff2'),
-        url('/src/assets/fonts/JosefinSans-Bold.woff') format('woff'),
-        url('/src/assets/fonts/JosefinSans-Bold.svg') format('svg');
-} */
-
-h1 {
-    //font-family: 'Josefin Sans Bold';
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('./assets/fonts/NotoSans.eot') format('embedded-opentype'),
+        url('./assets/fonts/NotoSans.woff2') format('woff2'),
+        url('./assets/fonts/NotoSans.woff') format('woff'),
+        url('./assets/fonts/NotoSans.svg') format('svg');
 }
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans';
+}

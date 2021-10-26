@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Typed from 'typed.js';
 
 @Component({
   selector: 'app-banner',
@@ -6,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent implements OnInit {
-
   bannerVideo: any;
-
+  
   constructor() { }
 
   ngOnInit(): void {
