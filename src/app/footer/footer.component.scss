@@ -2,4 +2,26 @@
 
 footer {
     background-color: $dark-background;
+    position: relative;
+
+    &:before {
+        content: "";
+        background: url('/assets/images/segment-footer.svg') no-repeat;
+        background-size: cover;
+        background-position-y: center;
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: -10rem;
+        height: 20rem;
+        z-index: -1;
+
+        @include media-breakpoint-down(md) {
+            height: 10rem;
+        }
+    }
+}
+
+#copyRight {
+    opacity: .7;
 }

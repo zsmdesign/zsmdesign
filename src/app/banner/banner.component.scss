@@ -33,7 +33,6 @@
 
 #heroContainer {
     position: relative;
-    z-index: -1;
 
     .logo-container {
         img {
@@ -41,7 +40,7 @@
             width: 22%;
             left: 50%;
             top: 4rem;
-            transform: translateX(-50%);
+            transform: translateX(-48%);
         }
 
         .logo {
@@ -50,18 +49,24 @@
 
         .mask {
             z-index: 0;
-            opacity: .5;
+            opacity: .3;
         }
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(lg) {
             img {
-                top: 3rem;
+                top: 1rem;
+            }
+        }
+        @include media-breakpoint-down(md) {
+            img {
+                width: 35%;
             }
         }
     }
 
     .text-container {
         position: absolute;
+        z-index: 1;
         color: $white;
         text-align: center;
         width: 60%;
@@ -71,6 +76,35 @@
 
         h1 {
             font-size: 180%;
+        }
+        a {
+            color: $white;
+            font-size: 1.3rem;
+            border: 3px solid $white;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: .3rem .8rem;
+            border-radius: 2rem;
+            transition: all ease-in-out .3s;
+            background-color: rgba($color: $black, $alpha: .3);
+
+            &:hover {
+                color: $black;
+                background-color: $white;
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+            top: 45%;
+            width: 90%;
+
+            h1 {
+                font-size: 150%;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            display: none;
         }
     }
 }
