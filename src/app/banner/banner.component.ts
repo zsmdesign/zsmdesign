@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import Typed from 'typed.js';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-banner',
@@ -8,6 +8,9 @@ import Typed from 'typed.js';
 })
 export class BannerComponent implements OnInit {
   bannerVideo: any;
+  mobileMenuActive = false;
+  faBars = faBars;
+  faTimes = faTimes;
   
   constructor() { }
 
@@ -24,4 +27,7 @@ export class BannerComponent implements OnInit {
     }, 200);
   }
 
+  mobileMenu() {
+    this.mobileMenuActive = !this.mobileMenuActive;
+  }
 }

@@ -1,8 +1,11 @@
-<nav id="mainNav" class="navbar sticky-top bg-dark">
+<nav id="mainNav" class="navbar sticky-top bg-dark" [ngClass]="{'mobile-menu-open': this.mobileMenuActive}">
     <div class="container-fluid">
         <img class="navbar-logo" src="assets/images/zsm-logo.svg" alt="zsmdesign logo" title="zsmdesign logo">
 
-        <div class="menu-opions fw-bold ps-5">
+        <a class="text-white me-3" *ngIf="!this.mobileMenuActive" (click)="mobileMenu()"><fa-icon class="faBars" [icon]='faBars'></fa-icon></a>
+        <a class="text-white me-3" *ngIf="this.mobileMenuActive" (click)="mobileMenu()"><fa-icon class="faTimes" [icon]='faTimes'></fa-icon></a>
+
+        <div class="menu-opions fw-bold">
             <a aria-current="page" href="#frontEndAnchore">Front End</a>
             <a aria-current="page" href="#sunriseTrigger">Videos</a>
             <a aria-current="page" href="#aboutMeAnchore">Contact</a>
@@ -20,7 +23,7 @@
         <h1 class="fw-bold mb-3">I combine technology, art, and experience to create things for the Internet, making them look nice and work well.</h1>
         <a class="fw-bold" aria-current="page" href="#aboutMeAnchore">Contact</a>
     </div>
-    <video id="heroVideo" class="w-100" loop muted autoplay poster="https://picsum.photos/1920/1080">
+    <video id="heroVideo" class="w-100" loop muted autoplay playsinline poster="assets/images/hero-poster.jpg">
         <source src="assets/videos/hero-video-v3.mp4" type="video/mp4">
     </video>
 </div>
