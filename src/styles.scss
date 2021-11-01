@@ -5,6 +5,10 @@
     color: $white;
 }
 
+.fw-bold {
+    font-family: 'Nunito Sans Bold' !important;
+}
+
 body {
     position: relative;
 }
@@ -16,13 +20,26 @@ body {
 // ---------------- common classes end ---------------- //
 
 @font-face {
-    font-family: 'Noto Sans';
-    src: url('./assets/fonts/NotoSans.eot') format('embedded-opentype'),
-        url('./assets/fonts/NotoSans.woff2') format('woff2'),
-        url('./assets/fonts/NotoSans.woff') format('woff'),
-        url('./assets/fonts/NotoSans.svg') format('svg');
+    font-family: 'Nunito Sans Regular';
+    src: url('./assets/fonts/NunitoSans-Regular.eot') format('embedded-opentype'),
+        url('./assets/fonts/NunitoSans-Regular.woff2') format('woff2'),
+        url('./assets/fonts/NunitoSans-Regular.woff') format('woff'),
+        url('./assets/fonts/NunitoSans-Regular.ttf') format('truetype'),
+        url('./assets/fonts/NunitoSans-Regular.svg') format('svg');
+}
+@font-face {
+    font-family: 'Nunito Sans Bold';
+    src: url('./assets/fonts/NunitoSans-Bold.eot') format('embedded-opentype'),
+        url('./assets/fonts/NunitoSans-Bold.woff2') format('woff2'),
+        url('./assets/fonts/NunitoSans-Bold.woff') format('woff'),
+        url('./assets/fonts/NunitoSans-Bold.ttf') format('truetype'),
+        url('./assets/fonts/NunitoSans-Bold.svg') format('svg');
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Noto Sans';
+    font-family: 'Nunito Sans Bold';
+}
+
+p, span, a {
+    font-family: 'Nunito Sans Regular';
 }

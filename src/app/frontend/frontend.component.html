@@ -14,7 +14,7 @@
                 <div id="{{ i + 1 }}" class="site-container" [ngClass]="{'reveal': site.visible}" *ngFor="let site of sites; index as i;">
                     <ng-container *ngIf="site.visible">
                         <div class="site-illustration" [ngStyle]="{'background-image': 'url(' + site.imgUrl + ')'}"></div>
-                        <div class="title-container"><h2 class="pt-3 fw-bold"><a href="{{ site.siteUrl }}" target="_blank">{{ site.title }}</a></h2></div>
+                        <div class="title-container"><h2 class="pt-3"><a class="fw-bold" href="{{ site.siteUrl }}" target="_blank">{{ site.title }}</a></h2></div>
                         <div class="text-container"><p class="mb-0">
                             {{ site.text }}
                             <ng-container *ngIf="site.id === 1">

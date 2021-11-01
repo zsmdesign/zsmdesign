@@ -28,6 +28,8 @@
     }
 
     .keywords {
+        font-family: 'Nunito Sans Regular' !important;
+
         .faCircle {
             color: #B1199F;
             font-size: 50%;
@@ -200,10 +202,11 @@
 
     .rotate {
         display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+
         &.left {
             transform: rotate(180deg);
-            position: relative;
-            top: 2px;
         }
     }
 

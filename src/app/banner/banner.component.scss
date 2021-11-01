@@ -11,6 +11,10 @@
 
     .ng-fa-icon {
         font-size: 2rem;
+
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
     }
 
     .menu-opions {
