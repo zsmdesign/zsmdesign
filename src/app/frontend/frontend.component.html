@@ -33,7 +33,7 @@
             </div>
 
             <div class="col-sm-12 col-lg-7">
-                <div id="cardCarousel">
+                <div id="cardCarousel" (swipeleft)="rollNext()" (swiperight)="rollBack()">
                     <div id="largeRollIcons">
                         <div class="roll-icon left" (click)="rollNext()"><fa-icon class="faPlay" [icon]='faPlay'></fa-icon></div>
                         <div class="roll-icon right" (click)="rollBack()"><fa-icon class="faPlay" [icon]='faPlay'></fa-icon></div>
@@ -56,7 +56,7 @@
             <div class="col-sm-12 d-lg-none">
                 <div id="{{ i + 1 }}" class="site-container" [ngClass]="{'reveal': site.visible}" *ngFor="let site of sites; index as i;">
                     <ng-container *ngIf="site.visible">
-                        <div class="title-container"><h2 class="pt-3 fw-bold"><a href="{{ site.siteUrl }}" target="_blank">{{ site.title }}</a></h2></div>
+                        <div class="title-container"><h2 class="pt-3 mb-0"><a class="fw-bold" href="{{ site.siteUrl }}" target="_blank">{{ site.title }}</a></h2></div>
                         <div class="text-container"><p class="mb-0">
                             {{ site.text }}
                             <ng-container *ngIf="site.id === 1">

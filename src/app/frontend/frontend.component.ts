@@ -4,10 +4,7 @@ import { faPlay, faCircle } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-frontend',
   templateUrl: './frontend.component.html',
-  styleUrls: ['./frontend.component.scss'],
-  animations: [
-    // animation triggers go here
-  ]
+  styleUrls: ['./frontend.component.scss']
 })
 
 export class FrontendComponent implements OnInit {
@@ -32,7 +29,11 @@ export class FrontendComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    //console.log(Hammer)
+  }
 
+  test() {
+    console.log('test')
   }
 
   rollNext() {
