@@ -180,7 +180,7 @@
 #cardCarousel {
     padding-left: 10%;
     padding-top: 4rem;
-
+    touch-action: pan-y !important;
     width: 100%;
     text-align: center;
     margin: auto;

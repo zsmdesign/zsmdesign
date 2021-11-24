@@ -10,7 +10,6 @@ import { faPlay, faCircle } from '@fortawesome/free-solid-svg-icons';
 export class FrontendComponent implements OnInit {
   faPlay = faPlay;
   faCircle = faCircle;
-  oJet = 'test';
 
   cards = [
     { id: 0, imgUrl: './assets/images/card-aimotive.jpg', order: '1' },
@@ -30,10 +29,6 @@ export class FrontendComponent implements OnInit {
 
   ngOnInit(): void {
     //console.log(Hammer)
-  }
-
-  test() {
-    console.log('test')
   }
 
   rollNext() {
